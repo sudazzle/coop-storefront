@@ -66,8 +66,8 @@ const sortStoresByDistance = (stores: Store[], currentLocation: Coordinate, sort
 }
 
 async function getData() {
-  const res = await axios.get('/api/get-stores')
-  return res.data as StoreByLocation
+  const res = await axios.get('/api/get-stores');
+  return res.data as StoreByLocation;
 }
 
 const StoreOpenStatus: React.FC<{ open: boolean }> = ({ open }) => {
@@ -95,7 +95,7 @@ export default function Home() {
   }, []);
 
   if (isLoading) {
-    return <div className="text-center text-black p-5">Lasting...</div>
+    return <div className="text-center text-black p-5">Lasting...</div>;
   }
 
   const onSort = (sortOrder: SortingOrder) => {

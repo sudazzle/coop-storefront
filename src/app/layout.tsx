@@ -1,16 +1,16 @@
-import React from "react";
-import type { Metadata } from "next";
-import "./globals.css";
-import { Logo } from "./icons/logo";
-import { CoopMarked } from "./icons/CoopMarked";
-import { CoopMega } from "./icons/CoopMega";
-import { Prix } from "./icons/Prix";
-import { Matkroken } from "./icons/Matkroken";
-import { Obs } from "./icons/Obs";
-import { Extra } from "./icons/Extra";
-import { Byggprix } from "./icons/Byggprix";
-import { ObsBygg } from "./icons/ObsBygg";
-import { CoopElectro } from "./icons/CoopElectro";
+import React from 'react';
+import type { Metadata } from 'next';
+import './globals.css';
+import { Logo } from './icons/logo';
+import { CoopMarked } from './icons/CoopMarked';
+import { CoopMega } from './icons/CoopMega';
+import { Prix } from './icons/Prix';
+import { Matkroken } from './icons/Matkroken';
+import { Obs } from './icons/Obs';
+import { Extra } from './icons/Extra';
+import { Byggprix } from './icons/Byggprix';
+import { ObsBygg } from './icons/ObsBygg';
+import { CoopElectro } from './icons/CoopElectro';
 
 export const metadata: Metadata = {
   title: "Butikker - Coop",
