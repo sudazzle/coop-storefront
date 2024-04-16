@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Page renders both sorting buttons 1`] = `
+<div>
+  <button
+    class="hover:bg-blue-900 ease-in duration-300 hover:scale-105 hover:border-blue-900 hover:text-white border border-blue-300 rounded-xl py-2 px-4 bg-white text-blue-900"
+  >
+    Sorter etter Nærmeste
+  </button>
+  <button
+    class="hover:bg-blue-900 ease-in duration-300 hover:scale-105 hover:border-blue-900 hover:text-white border border-blue-300 rounded-xl py-2 px-4 bg-white text-blue-900"
+  >
+    Sorter etter Fjerneste
+  </button>
+</div>
+`;

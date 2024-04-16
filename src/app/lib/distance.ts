@@ -13,7 +13,6 @@ export const toRadians = (degrees: number) => {
 // https://en.wikipedia.org/wiki/Haversine_formula
 // https://www.movable-type.co.uk/scripts/latlong.html
 export const haversineDistance = (coords1: Coordinate, coords2: Coordinate) => {
-
   // https://en.wikipedia.org/wiki/Earth_radius
   // A globally-average value is usually considered to be 6,371
   const earthRadiusInKm = 6371;
