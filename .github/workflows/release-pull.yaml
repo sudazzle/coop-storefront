@@ -32,21 +32,21 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install chromium --with-deps
 
-      - name: Run Dev Server
-        run: npm run dev &
+      # - name: Run Dev Server
+      #   run: npm run dev &
 
-      - name: Wait for server
-        id: wait
-        run: |
-          #!/bin/bash -ex
-          while true; do
-            curl -k -q http://localhost:3000 && exit 0 || sleep 2
-          done
-        continue-on-error: true
-        timeout-minutes: 1
+      # - name: Wait for server
+      #   id: wait
+      #   run: |
+      #     #!/bin/bash -ex
+      #     while true; do
+      #       curl -k -q http://localhost:3000 && exit 0 || sleep 2
+      #     done
+      #   continue-on-error: true
+      #   timeout-minutes: 1
       
       - name: Run Playwright tests
-        if: steps.wait.outcome == 'success'
+        # if: steps.wait.outcome == 'success'
         run: npm run test:e2e
       
       - uses: actions/upload-artifact@v4
