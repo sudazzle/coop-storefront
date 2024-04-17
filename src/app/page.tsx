@@ -1,28 +1,11 @@
 'use client';
 
 import axios from 'axios';
-import { Coordinate, haversineDistance } from '@/app/lib/distance';
+import { Coordinate, haversineDistance, sortStoresByDistance } from '@/app/lib/distance';
 import { SortingButtons } from './components/SortingButtons';
 import { useEffect, useState } from 'react';
 import { SortingOrder, Store, StoreByLocation } from '@/app/types';
 import { StoreList } from './components/StoreList';
-
-export const sortStoresByDistance = (stores: Store[], currentLocation: Coordinate, sortOrder: SortingOrder) => {
-  const clone = [...stores];
-  
-  clone.sort((a, b) => {
-    const distanceA = haversineDistance(currentLocation, {latitude: a.Lat, longitude: a.Lng});
-    const distanceB = haversineDistance(currentLocation, {latitude: b.Lat, longitude: b.Lng});
-
-    if (sortOrder === SortingOrder.ASC) {
-      return distanceA - distanceB;
-    } else {
-      return distanceB - distanceA;
-    }
-  });
-
-  return clone;
-}
 
 async function getData() {
   const res = await axios.get('/api/get-stores');

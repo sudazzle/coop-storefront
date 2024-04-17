@@ -1,3 +1,5 @@
+import { SortingOrder, Store } from "../types";
+
 export type Coordinate = {
   latitude: number
   longitude: number
@@ -31,3 +33,21 @@ export const haversineDistance = (coords1: Coordinate, coords2: Coordinate) => {
   
   return earthRadiusInKm * c;
 }
+
+export const sortStoresByDistance = (stores: Store[], currentLocation: Coordinate, sortOrder: SortingOrder) => {
+  const clone = [...stores];
+  
+  clone.sort((a, b) => {
+    const distanceA = haversineDistance(currentLocation, {latitude: a.Lat, longitude: a.Lng});
+    const distanceB = haversineDistance(currentLocation, {latitude: b.Lat, longitude: b.Lng});
+
+    if (sortOrder === SortingOrder.ASC) {
+      return distanceA - distanceB;
+    } else {
+      return distanceB - distanceA;
+    }
+  });
+
+  return clone;
+}
+
