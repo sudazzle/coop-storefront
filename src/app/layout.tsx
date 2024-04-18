@@ -13,7 +13,7 @@ import { ObsBygg } from './icons/ObsBygg';
 import { CoopElectro } from './icons/CoopElectro';
 
 export const metadata: Metadata = {
-  title: "Butikker - Coop",
+  title: "Våre Butikker - Coop",
 };
 
 const StoreLogoWrapper: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({ children, ...props }) => {
