@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/sudazzle/coop-storefront/compare/v1.0.1...v1.0.2) (2024-04-18)
+
+
+### Bug Fixes
+
+* trigger deploy ([e543cce](https://github.com/sudazzle/coop-storefront/commit/e543cce77285a064dbc05863d4a82c2c3b4179f0))
+
 ## [1.0.1](https://github.com/sudazzle/coop-storefront/compare/v1.0.0...v1.0.1) (2024-04-17)
 
 
